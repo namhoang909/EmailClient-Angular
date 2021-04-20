@@ -6,8 +6,8 @@ const routes: Routes = [
   {
     path: 'inbox',
     canLoad: [AuthGuard],
-    loadChildren: () => //lazy loading
-      import('./inbox/inbox-routing.module').then(mod => mod.InboxRoutingModule),
+    loadChildren: () => //lazy loading inbox/inbox.module
+      import('./inbox/inbox.module').then(mod => mod.InboxModule),
   },
 ];
 
